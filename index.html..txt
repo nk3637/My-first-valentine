@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Quiz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            padding: 20px;
+        }
+        #quiz-container, #love-message {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            background: #ff407d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #ff1e56;
+        }
+        #love-message {
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="quiz-container">
+        <h1>Romantic Quiz</h1>
+        <p>Answer this to unlock a special message!</p>
+        <p id="question">What is my favorite thing about you?</p>
+        <button onclick="checkAnswer('wrong')">Your Hair</button>
+        <button onclick="checkAnswer('wrong')">Your Eyes</button>
+        <button onclick="checkAnswer('right')">Everything ❤️</button>
+    </div>
+
+    <div id="love-message">
+        <h1>I LOVE YOU! ❤️</h1>
+        <p>You are my everything! Thank you for being in my life.</p>
+    </div>
+
+    <script>
+        function checkAnswer(choice) {
+            if (choice === 'right') {
+                document.getElementById('quiz-container').style.display = 'none';
+                document.getElementById('love-message').style.display = 'block';
+            } else {
+                alert('Hmm... try again!');
+            }
+        }
+    </script>
+
+</body>
+</html>
